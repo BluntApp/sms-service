@@ -21,6 +21,10 @@
     <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
     <image.version>${project.version}</image.version>
     <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
+    <sonar.projectKey>BluntApp_sms-service</sonar.projectKey>
+    <sonar.organization>bluntapp</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.login>d6b4ee6376b4818f64704fbaefeeb73c4e89badb</sonar.login>
   </properties>
 
   <dependencies>
@@ -126,6 +130,23 @@
       <groupId>io.projectreactor</groupId>
       <artifactId>reactor-test</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>20.0</version>
     </dependency>
   </dependencies>
   <dependencyManagement>
