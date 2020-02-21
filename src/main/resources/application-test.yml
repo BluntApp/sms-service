@@ -1,42 +1,42 @@
 server:
   port: 9010
 
-#spring:
-#  kafka:
-#    #bootstrap-servers: http://${HOST_IP}:9092
-#    bootstrap-servers: http://localhost:9092
-#  sleuth:
-#    messaging:
-#      kafka:
-#        enabled: true
-#    sampler:
-#      probability: 1.0
-#  zipkin:
-#    kafka:
-#      topic: blunt-sms
-#    sender:
-#      type: kafka
-#  data:
-#    mongodb:
-#      uri: mongodb+srv://blunt:blunt@clusterblunt-ozeey.gcp.mongodb.net/sms?retryWrites=true&w=majority
-#  boot:
-#    admin:
-#      client:
-#        # url: http://${HOST_IP}:9000
-#        url: http://localhost:9000
-#        instance:
-#          health-url: http://host.docker.internal:9003/actuator/health
-#          management-url: http://host.docker.internal:9003/actuator
-#          service-url: http://host.docker.internal:9003
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#
-#feign:
-#  httpclient:
-#    connection-timeout: 6000
+spring:
+  kafka:
+    #bootstrap-servers: http://${HOST_IP}:9092
+    bootstrap-servers: http://localhost:9092
+  sleuth:
+    messaging:
+      kafka:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    kafka:
+      topic: blunt-sms
+    sender:
+      type: kafka
+  data:
+    mongodb:
+      uri: mongodb+srv://blunt:blunt@clusterblunt-ozeey.gcp.mongodb.net/sms?retryWrites=true&w=majority
+  boot:
+    admin:
+      client:
+        # url: http://${HOST_IP}:9000
+        url: http://localhost:9000
+        instance:
+          health-url: http://host.docker.internal:9003/actuator/health
+          management-url: http://host.docker.internal:9003/actuator
+          service-url: http://host.docker.internal:9003
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+feign:
+  httpclient:
+    connection-timeout: 6000
 
 logging:
   file:

@@ -47,6 +47,8 @@ public class SmsService {
 
     ResponseEntity<JSONObject> responseEntity = restTemplate
         .getForEntity(textLocal.getUrl()+queryParameters, JSONObject.class, queryMap );
+    log.info("SMS sent Response: "+responseEntity.getBody());
+    log.info("SMS sent Status: "+responseEntity.getBody().get("status"));
     if(responseEntity.getBody().get("status").equals("success")){
       return new ResponseEntity<>("SMS Sent successfully",  HttpStatus.OK);
     } else if(responseEntity.getBody().get("status").equals("failure")){
